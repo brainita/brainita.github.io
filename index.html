@@ -26,10 +26,18 @@
       z-index: 999;
     }
 
+    header img {
+      height: 40px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
     header h1 {
       font-size: 1.4rem;
       letter-spacing: 1px;
       color: #f2d27a;
+      display: inline-flex;
+      align-items: center;
     }
 
     nav a {
@@ -60,7 +68,7 @@
 
     .hero {
       height: 100vh;
-      background: url('banner.png') no-repeat center center/cover;
+      background: url('assets/banner.png') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -68,16 +76,30 @@
       text-align: center;
       color: #f2d27a;
       text-shadow: 0 0 10px #000;
+      padding: 0 10px;
+    }
+
+    .hero img {
+      width: 120px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px #000);
     }
 
     .hero h2 {
       font-size: 3rem;
       margin-bottom: 10px;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #f2d27a, 0 0 20px #f2d27a; }
+      to { text-shadow: 0 0 20px #ffd94e, 0 0 40px #ffd94e; }
     }
 
     .hero p {
       font-size: 1.3rem;
       font-style: italic;
+      color: #ffd94e;
     }
 
     section {
@@ -103,21 +125,30 @@
       padding: 6px 0;
     }
 
-    .meme-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    /* Meme slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 700px;
+      margin: auto;
     }
 
-    .meme-gallery img {
+    .slides {
+      display: none;
+    }
+
+    .slides img {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 0 10px #000;
-      transition: transform 0.3s;
     }
 
-    .meme-gallery img:hover {
-      transform: scale(1.05);
+    .fade {
+      animation: fade 1.5s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
     }
 
     footer {
@@ -168,7 +199,7 @@
 <body>
 
   <header>
-    <h1>BRAINITA</h1>
+    <h1><img src="assets/logo.png" alt="Brainita Logo"> BRAINITA</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#tokenomics">Tokenomics</a>
@@ -178,30 +209,39 @@
       <a href="#community">Community</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="buy-btn" onclick="showPopup()">BUY $BRT</button>
+    <button class="buy-btn" onclick="buyBRT()">BUY $BRT</button>
   </header>
 
   <div class="hero">
-    <h2>The Swamp Awakens</h2>
-    <p>BRT Revolution</p>
+    <img src="assets/logo.png" alt="Brainita Logo">
+    <h2>BRAINITA DOESN’T BELONG TO ONE,<br>IT BELONGS TO ALL.</h2>
+    <p>The Meme Token Awakening From The Swamp</p>
   </div>
 
   <section id="about">
     <h2>About</h2>
     <p>
-      <strong>BRAINITA</strong> — The Meme Token Awakening From The Swamp.<br />
-      Built by the community, for the community.
+      <strong>BRAINITA ($BRT)</strong> is a community-driven meme token born deep within the digital swamp.
+      It represents a new era where humor meets decentralized power. BRAINITA is not just another token —
+      it’s a movement that thrives on creativity, unity, and unstoppable energy.<br><br>
+      In the spirit of the meme revolution, BRAINITA celebrates the idea that <em>greatness doesn’t rise from perfection,
+      but from persistence, passion, and fun</em>. Whether you’re a holder, a meme creator, or just a supporter, you’re
+      part of the story. Together, we awaken the swamp and show the world what true community power looks like.
     </p>
   </section>
 
   <section id="tokenomics">
-    <h2>Tokenomics</h2>
+    <h2>Token Information</h2>
     <table class="tokenomics-table">
-      <tr><td>Total Supply:</td><td>1,000,000,000 BRT</td></tr>
-      <tr><td>Airdrop:</td><td>60%</td></tr>
-      <tr><td>Liquidity:</td><td>10%</td></tr>
-      <tr><td>Development & Treasury:</td><td>20%</td></tr>
-      <tr><td>Marketing & Partnerships:</td><td>10%</td></tr>
+      <tr><td><strong>Name:</strong></td><td>BRAINITA</td></tr>
+      <tr><td><strong>Symbol:</strong></td><td>BRT</td></tr>
+      <tr><td><strong>Decimals:</strong></td><td>9</td></tr>
+      <tr><td><strong>Contract Address:</strong></td><td style="word-break: break-all;">7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf</td></tr>
+      <tr><td><strong>Total Supply:</strong></td><td>1,000,000,000 BRT</td></tr>
+      <tr><td><strong>Airdrop:</strong></td><td>60%</td></tr>
+      <tr><td><strong>Liquidity:</strong></td><td>10%</td></tr>
+      <tr><td><strong>Development & Treasury:</strong></td><td>20%</td></tr>
+      <tr><td><strong>Marketing & Partnerships:</strong></td><td>10%</td></tr>
     </table>
   </section>
 
@@ -221,14 +261,19 @@
   </section>
 
   <section id="meme">
-  <h2>Meme Gallery</h2>
-  <div class="meme-gallery">
-    <img src="assets/meme1.png" alt="Brainita Meme 1" />
-    <img src="assets/meme2.png" alt="Brainita Meme 2" />
-    <img src="assets/meme3.png" alt="Brainita Meme 3" />
-  </div>
-</section>
-
+    <h2>Meme Slideshow</h2>
+    <div class="slideshow-container">
+      <div class="slides fade">
+        <img src="assets/meme1.png" alt="Brainita Meme 1">
+      </div>
+      <div class="slides fade">
+        <img src="assets/meme2.png" alt="Brainita Meme 2">
+      </div>
+      <div class="slides fade">
+        <img src="assets/meme3.png" alt="Brainita Meme 3">
+      </div>
+    </div>
+  </section>
 
   <section id="community">
     <h2>Community</h2>
@@ -253,20 +298,43 @@
   <div id="popup">
     <div id="popup-content">
       <h3>Trading Notice</h3>
-      <p>Trading BRT soon available on public DEX platforms.<br>
+      <p>Trading BRT available on Raydium DEX.<br>
       Always DYOR (Do Your Own Research).</p>
       <button onclick="closePopup()">Close</button>
     </div>
   </div>
 
   <script>
+    // Mở link Raydium + popup
+    function buyBRT() {
+      window.open("https://raydium.io/swap/?inputCurrency=sol&outputCurrency=7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf", "_blank");
+      showPopup();
+    }
+
+    // Popup
     function showPopup() {
       document.getElementById('popup').style.display = 'flex';
     }
     function closePopup() {
       document.getElementById('popup').style.display = 'none';
     }
+
+    // Slideshow
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
   </script>
 
 </body>
 </html>
+
