@@ -3,389 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BRAINITA | The Meme Token Awakening From The Swamp</title>
-  <style>
-    <section id="token-info">
-  <h2>Token Information</h2>
-  <table class="tokenomics-table">
-    <tr><td>Token Name:</td><td>BRAINITA</td></tr>
-    <tr><td>Symbol:</td><td>BRT</td></tr>
-    <tr><td>Network:</td><td>Solana</td></tr>
-    <tr><td>Decimals:</td><td>9</td></tr>
-    <tr><td>Contract Address:</td>
-        <td><a href="https://solscan.io/token/7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf" target="_blank">
-          7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf
-        </a></td>
-    </tr>
-    <tr><td>Total Supply:</td><td>1,000,000,000 BRT</td></tr>
-  </table>
-</section>
+  <title>BRAINITA | The Meme Token Awakening Fun</title>
 
+  <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at center, #0a0f1f 20%, #0e1b2e 100%);
-      color: #f2d27a;
+      background: radial-gradient(circle at center, #ffffff, #f2f2f2);
+      color: #111;
       scroll-behavior: smooth;
-        /* --- Fix logo hiển thị và chữ banner --- */
-header img.logo {
-  height: 48px;
-  width: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-top: 4px;
-}
-
-header {
-  overflow: visible;
-}
-
-.hero h2 {
-  font-size: 2.2rem; /* giảm kích thước để không che hình */
-  margin-bottom: 10px;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-}
-
-}
-
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      background: rgba(10, 15, 31, 0.85);
-      backdrop-filter: blur(8px);
-      z-index: 999;
-    }
-
-    header img {
-      height: 40px;
-      margin-right: 10px;
-      vertical-align: middle;
+      text-align: center;
+      background: #000;
+      color: #f2d27a;
+      padding: 40px 20px;
+      background-image: url('assets/banner.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
     }
 
     header h1 {
-      font-size: 1.4rem;
-      letter-spacing: 1px;
-      color: #f2d27a;
-      display: inline-flex;
-      align-items: center;
+      font-size: 2.4rem;
+      margin-bottom: 8px;
     }
 
-    nav a {
-      color: #f2d27a;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
     }
 
-    nav a:hover {
-      color: #ffd94e;
+    .logo {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: transparent;
     }
 
-    .buy-btn {
-      background: #f2d27a;
-      color: #0a0f1f;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .buy-btn:hover {
-      background: #ffd94e;
-    }
-
-    .hero {
-      height: 100vh;
-      background: url('assets/banner.png') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    /* Token Info Section */
+    #token-info {
       text-align: center;
+      padding: 40px 0;
+    }
+
+    #token-info h2 {
       color: #f2d27a;
-      text-shadow: 0 0 10px #000;
-      padding: 0 10px;
-    }
-
-    .hero img {
-      width: 120px;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 10px #000);
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      animation: glow 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #f2d27a, 0 0 20px #f2d27a; }
-      to { text-shadow: 0 0 20px #ffd94e, 0 0 40px #ffd94e; }
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      font-style: italic;
-      color: #ffd94e;
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #ffd94e;
     }
 
     .tokenomics-table {
-      text-align: left;
       margin: 0 auto;
-      width: 300px;
+      border-collapse: collapse;
+      width: 85%;
+      max-width: 600px;
+      font-size: 1.1rem;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .tokenomics-table td {
-      padding: 6px 0;
-      <section id="token-info">
-  <h2>Token Information</h2>
-  <table class="tokenomics-table">
-    <tr><td>Token Name:</td><td>BRAINITA</td></tr>
-    <tr><td>Symbol:</td><td>BRT</td></tr>
-    <tr><td>Network:</td><td>Solana</td></tr>
-    <tr><td>Decimals:</td><td>9</td></tr>
-    <tr><td>Contract Address:</td>
-        <td><a href="https://solscan.io/token/7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf" target="_blank">7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf</a></td>
-    </tr>
-    <tr><td>Total Supply:</td><td>1,000,000,000 BRT</td></tr>
-  </table>
-</section>
-
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
     }
 
-    /* Meme slideshow */
-    .slideshow-container {
-      position: relative;
-      max-width: 700px;
-      margin: auto;
+    .tokenomics-table td:first-child {
+      font-weight: bold;
+      color: #333;
+      width: 45%;
+      text-align: left;
     }
 
-    .slides {
-      display: none;
+    .tokenomics-table td:last-child {
+      text-align: right;
+      color: #111;
     }
 
-    .slides img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #000;
-    }
-
-    .fade {
-      animation: fade 1.5s;
-    }
-
-    @keyframes fade {
-      from { opacity: 0.4; }
-      to { opacity: 1; }
+    .tokenomics-table a {
+      color: #0077ff;
+      text-decoration: none;
+      word-break: break-all;
     }
 
     footer {
-      background: #0a0f1f;
-      color: #999;
       text-align: center;
       padding: 20px;
+      background: #000;
+      color: #f2d27a;
+      margin-top: 40px;
       font-size: 0.9rem;
     }
 
-    /* Popup styling */
-    #popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    #popup-content {
-      background: #111a2c;
-      color: #f2d27a;
-      padding: 20px 30px;
-      border-radius: 10px;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 0 20px #000;
-    }
-
-    #popup-content button {
-      margin-top: 15px;
+    /* Buy Button */
+    .buy-btn {
+      display: inline-block;
       background: #f2d27a;
-      color: #0a0f1f;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 15px;
     }
 
-    #popup-content button:hover {
-      background: #ffd94e;
+    .buy-btn:hover {
+      background: #ffe88a;
+      transform: scale(1.05);
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <h1><img src="assets/logo.png" alt="Brainita Logo"> BRAINITA</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#team">Team</a>
-      <a href="#meme">Meme Gallery</a>
-      <a href="#community">Community</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="buy-btn" onclick="buyBRT()">BUY $BRT</button>
+    <img src="assets/logo.png" alt="BRAINITA Logo" class="logo" />
+    <h1>BRAINITA</h1>
+    <p>DON'T BELONG TO ONE — IT BELONGS TO ALL</p>
+    <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf" 
+       class="buy-btn" target="_blank">BUY BRT</a>
   </header>
 
-  <div class="hero">
-    <img src="assets/logo.png" alt="Brainita Logo">
-    <h2>BRAINITA DOESN’T BELONG TO ONE,<br>IT BELONGS TO ALL.</h2>
-    <p>The Meme Token Awakening From The Swamp</p>
-  </div>
-
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      <strong>BRAINITA ($BRT)</strong> is a community-driven meme token born deep within the digital swamp.
-      It represents a new era where humor meets decentralized power. BRAINITA is not just another token —
-      it’s a movement that thrives on creativity, unity, and unstoppable energy.<br><br>
-      In the spirit of the meme revolution, BRAINITA celebrates the idea that <em>greatness doesn’t rise from perfection,
-      but from persistence, passion, and fun</em>. Whether you’re a holder, a meme creator, or just a supporter, you’re
-      part of the story. Together, we awaken the swamp and show the world what true community power looks like.
-    </p>
-  </section>
-
-  <section id="tokenomics">
+  <section id="token-info">
     <h2>Token Information</h2>
     <table class="tokenomics-table">
-      <tr><td><strong>Name:</strong></td><td>BRAINITA</td></tr>
-      <tr><td><strong>Symbol:</strong></td><td>BRT</td></tr>
-      <tr><td><strong>Decimals:</strong></td><td>9</td></tr>
-      <tr><td><strong>Contract Address:</strong></td><td style="word-break: break-all;">7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf</td></tr>
-      <tr><td><strong>Total Supply:</strong></td><td>1,000,000,000 BRT</td></tr>
-      <tr><td><strong>Airdrop:</strong></td><td>60%</td></tr>
-      <tr><td><strong>Liquidity:</strong></td><td>10%</td></tr>
-      <tr><td><strong>Development & Treasury:</strong></td><td>20%</td></tr>
-      <tr><td><strong>Marketing & Partnerships:</strong></td><td>10%</td></tr>
+      <tr><td>Token Name:</td><td>BRAINITA</td></tr>
+      <tr><td>Symbol:</td><td>BRT</td></tr>
+      <tr><td>Network:</td><td>Solana</td></tr>
+      <tr><td>Decimals:</td><td>9</td></tr>
+      <tr><td>Contract Address:</td>
+        <td><a href="https://solscan.io/token/7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf" target="_blank">
+        7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf</a></td></tr>
+      <tr><td>Total Supply:</td><td>1,000,000,000 BRT</td></tr>
     </table>
   </section>
 
-  <section id="roadmap">
-    <h2>Roadmap</h2>
-    <p>
-      <strong>Phase 1:</strong> Launch & Community Building<br>
-      <strong>Phase 2:</strong> Listing on DEX & Partnerships<br>
-      <strong>Phase 3:</strong> Meme Expansion & NFTs<br>
-      <strong>Phase 4:</strong> Ecosystem Growth & Global Awareness
-    </p>
-  </section>
-
-  <section id="team">
-    <h2>Team</h2>
-    <p>Community-driven project. Built together, grown together.</p>
-  </section>
-
-  <section id="meme">
-    <h2>Meme Slideshow</h2>
-    <div class="slideshow-container">
-      <div class="slides fade">
-        <img src="assets/meme1.png" alt="Brainita Meme 1">
-      </div>
-      <div class="slides fade">
-        <img src="assets/meme2.png" alt="Brainita Meme 2">
-      </div>
-      <div class="slides fade">
-        <img src="assets/meme3.png" alt="Brainita Meme 3">
-      </div>
-    </div>
-  </section>
-
-  <section id="community">
-    <h2>Community</h2>
-    <p>
-      🐦 <a href="https://x.com/becwentan" target="_blank">Twitter</a> |
-      💬 <a href="https://t.me/BRAINITA" target="_blank">Telegram</a> |
-      💻 <a href="https://github.com/brainita" target="_blank">GitHub</a>
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:brainita.contact@gmail.com">brainita.contact@gmail.com</a></p>
-  </section>
-
   <footer>
-    <p>This website is for community and educational purposes only.<br>
-    No financial advice or investment offer.</p>
+    © 2025 BRAINITA — Powered by the Community 🐊💛
   </footer>
-
-  <!-- Popup -->
-  <div id="popup">
-    <div id="popup-content">
-      <h3>Trading Notice</h3>
-      <p>Trading BRT available on Raydium DEX.<br>
-      Always DYOR (Do Your Own Research).</p>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-
-  <script>
-    // Mở link Raydium + popup
-    function buyBRT() {
-      window.open("https://raydium.io/swap/?inputCurrency=sol&outputCurrency=7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf", "_blank");
-      showPopup();
-    }
-
-    // Popup
-    function showPopup() {
-      document.getElementById('popup').style.display = 'flex';
-    }
-    function closePopup() {
-      document.getElementById('popup').style.display = 'none';
-    }
-
-    // Slideshow
-    let slideIndex = 0;
-    showSlides();
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("slides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides, 3000);
-    }
-  </script>
-
 </body>
 </html>
-
