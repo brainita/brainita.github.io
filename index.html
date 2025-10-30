@@ -11,12 +11,25 @@
       background: radial-gradient(circle at center, #0a0f1f 20%, #0e1b2e 100%);
       color: #f2d27a;
       scroll-behavior: smooth;
-      header img.logo {
+        /* --- Fix logo hiển thị và chữ banner --- */
+header img.logo {
   height: 48px;
   width: auto;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 4px;
+}
+
+header {
+  overflow: visible;
+}
+
+.hero h2 {
+  font-size: 2.2rem; /* giảm kích thước để không che hình */
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
 }
 
     }
