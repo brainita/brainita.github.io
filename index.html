@@ -206,16 +206,21 @@
 
   <section id="token-info">
     <h2>Token Information</h2>
-    <table class="tokenomics-table">
+    <!-- Token Information Table -->
+<table style="width:100%; border-collapse: collapse; color: #FFD700; font-family: 'Poppins', sans-serif;">
   <tr><td>Token Name:</td><td>BRAINITA</td></tr>
   <tr><td>Symbol:</td><td>BRT</td></tr>
   <tr><td>Decimals:</td><td>9</td></tr>
   <tr>
     <td>Contract Address:</td>
     <td>
-      <a href="https://solscan.io/token/7HrtSpPb4RcemxzjRo4gvbTgHT" target="_blank">
-        7HrtSpPb4RcemxzjRo4gvbTgHT
+      <a href="https://solscan.io/token/7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf" 
+         target="_blank" 
+         id="contract-link"
+         style="color:#FFD700; text-decoration: underline; word-break: break-all;">
+         7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf
       </a>
+      <button class="copy-btn" onclick="copyAddress()">Copy</button>
     </td>
   </tr>
   <tr><td>Network:</td><td>Solana</td></tr>
@@ -225,6 +230,44 @@
   <tr><td>Development & Treasury:</td><td>20%</td></tr>
   <tr><td>Marketing & Partnerships:</td><td>10%</td></tr>
 </table>
+
+<style>
+  body {
+    background-color: #1c1c1c; /* nền xám than */
+    color: #FFD700;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  .copy-btn {
+    margin-left: 10px;
+    padding: 4px 10px;
+    background-color: #FFD700;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .copy-btn:hover {
+    background-color: #FFC107;
+  }
+</style>
+
+<script>
+function copyAddress() {
+    const address = document.getElementById('contract-link').textContent.trim();
+    navigator.clipboard.writeText(address)
+      .then(() => alert('✅ Contract address copied!'))
+      .catch(() => alert('❌ Copy failed, please copy manually.'));
+}
+</script>
+
 
 
     <div class="airdrop-note" aria-live="polite">
