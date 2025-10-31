@@ -345,17 +345,56 @@ function copyAddress() {
     </p>
   </section>
 
-  <footer id="contact">
-    <p>📩 Contact: <a href="mailto:brainita.contact@gmail.com">brainita.contact@gmail.com</a></p>
-    <p>
-      <a href="https://github.com/brainita">GitHub</a> |
-      <a href="https://twitter.com/brainita_token">Twitter</a> |
-      <a href="https://t.me/brainita">Telegram</a>
-      <a href="https://solscan.io/token/7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf" target="_blank" class="footer-link">Solscan</a>
+  <!-- Footer Section -->
+<footer style="background-color: #222; padding: 40px 20px; text-align: center;">
 
-    </p>
-    <p>© 2025 BRAINITA. All rights reserved.</p>
-  </footer>
+  <!-- Contact Email -->
+  <p style="color: #FFD700; margin-bottom: 20px;">
+    📩 Contact: <a href="mailto:brainita.contact@gmail.com" style="color: #FFD700;">brainita.contact@gmail.com</a>
+  </p>
+
+  <!-- Footer Links Icons -->
+  <div class="footer-links" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+
+    <!-- GitHub -->
+    <a href="https://github.com/brainita" target="_blank">
+      <img src="assets/github-icon.png" alt="GitHub" style="width:48px; height:48px;">
+    </a>
+
+    <!-- Twitter -->
+    <a href="https://twitter.com/brainita_token" target="_blank">
+      <img src="assets/twitter-icon.png" alt="Twitter" style="width:48px; height:48px;">
+    </a>
+
+    <!-- Telegram -->
+    <a href="https://t.me/brainita" target="_blank">
+      <img src="assets/telegram-icon.png" alt="Telegram" style="width:48px; height:48px;">
+    </a>
+
+    <!-- Solscan / BRT Token -->
+    <a href="https://solscan.io/token/7HrtSpPb4RcemxzjRo4gvbTgHtf5vyz7qX1XdvaEJbRf" target="_blank">
+      <img src="assets/icon-brt.png" alt="BRT Token" style="width:48px; height:48px;">
+    </a>
+
+  </div>
+
+  <!-- Footer Text -->
+  <p style="color: #FFD700; margin: 0; font-family: 'Poppins', sans-serif;">© 2025 BRAINITA. All Rights Reserved.</p>
+
+</footer>
+
+<!-- CSS Hover Effect -->
+<style>
+.footer-links a img {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-links a img:hover {
+    transform: scale(1.1); /* phóng to 10% khi hover */
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6); /* bóng vàng nhẹ */
+}
+</style>
+
 
   <script>
     function copyAddress() {
