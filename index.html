@@ -6,13 +6,12 @@
   <title>BRAINITA | Official Website</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      background-color: #000;
-      color: #FFD700;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
+    body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     }
+    
 
     header {
       display: flex;
@@ -53,10 +52,14 @@
     }
 
     .banner {
-    width: 100%;  /* full chiều ngang */
-    height: 400px; /* chỉnh chiều cao hoặc 100vh full màn hình */
+    width: 100vw;             /* 100% chiều ngang viewport */
+    height: 100vh;            /* 100% chiều cao viewport */
     background: url('assets/banner%20%283%29.png') center/cover no-repeat;
-    }
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+
     
 
     section {
